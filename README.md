@@ -31,7 +31,7 @@ public function registerBundles()
 }
 ```
 
-### Usage
+## Usage
 
 For more details see: https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#using-the-x-robots-tag-http-header
 

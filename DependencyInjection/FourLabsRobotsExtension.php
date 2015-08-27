@@ -14,6 +14,16 @@ class FourLabsRobotsExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
+        $configuration = new Configuration();
+        $config = $this->processConfiguration($configuration, $configs);
+
+        foreach($config as $key => $value) {
+            $container->setParameter(
+                sprintf('robots.%s', $key),
+                $value
+            );
+        }
+
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
     }

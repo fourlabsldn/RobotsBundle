@@ -3,9 +3,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="robots.listener.robots" class="FourLabs\RobotsBundle\EventListener\RobotsListener">
+        <service id="robots.listener.annotation" class="FourLabs\RobotsBundle\EventListener\AnnotationListener">
             <tag name="kernel.event_subscriber" />
             <argument type="service" id="annotation_reader" />
+        </service>
+        <service id="robots.listener.configuration" class="FourLabs\RobotsBundle\EventListener\ConfigurationListener">
+            <tag name="kernel.event_subscriber" />
+            <argument>%robots.block_all%</argument>
         </service>
     </services>
 </container>

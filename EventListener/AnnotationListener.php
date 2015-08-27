@@ -10,7 +10,7 @@ use FourLabs\RobotsBundle\Configuration\Robots;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\KernelEvents;
 
-class RobotsListener implements EventSubscriberInterface
+class AnnotationListener implements EventSubscriberInterface
 {
     private $annotationReader;
 
@@ -54,9 +54,10 @@ class RobotsListener implements EventSubscriberInterface
 
     public static function getSubscribedEvents()
     {
+        // higher priority -> trigger earlier
         return [
-            KernelEvents::CONTROLLER => 'onKernelController',
-            KernelEvents::RESPONSE => 'onKernelResponse',
+            KernelEvents::CONTROLLER => ['onKernelController', 1],
+            KernelEvents::RESPONSE => ['onKernelResponse', 1],
         ];
     }
 }

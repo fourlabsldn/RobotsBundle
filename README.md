@@ -6,7 +6,7 @@ Symfony2 bundle to control X-Robots-Tag HTTP header via annotations.
 
 ## Installation
 ### Download the Bundle
-Open a command console, enter your project directory and execute the following command to download the latest stable version of this bundle:
+Open a command console, enter your project directory and execute the following command to download the latest version of this bundle:
 
 ``` bash
 $ composer require fourlabs/robots-bundle dev-master
@@ -38,27 +38,36 @@ For more details see: https://developers.google.com/webmasters/control-crawl-ind
 Examples:
 
 ``` php
+use FourLabs\RobotsBundle\Configuration\Robots;
+
 /**
- * use FourLabs\RobotsBundle\Configuration\Robots;
- * 
  * @Robots(directive="index")
  */
+public function showAction()
+{
+}
 ```
 
 ``` php
+use FourLabs\RobotsBundle\Configuration\Robots;
+
 /**
- * use FourLabs\RobotsBundle\Configuration\Robots;
- * 
  * @Robots(directive="nofollow", userAgent="googlebot")
  * @Robots(directive="noindex, nofollow" userAgent="otherbot")
  */
+public function showAction()
+{
+}
 ```
 
 ``` php
+use FourLabs\RobotsBundle\Configuration\Robots;
+
 /**
- * use FourLabs\RobotsBundle\Configuration\Robots;
- * 
  * @Robots(directive="noarchive")
  * @Robots(directive="unavailable_after" value="25 Jun 2010 15:00:00 PST")
  */
+public function showAction()
+{
+}
 ```

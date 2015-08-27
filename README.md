@@ -1,6 +1,6 @@
 # Robots Bundle
 
-*Symfony2 bundle to control `X-Robots-Tag` HTTP header via annotations.*
+**Symfony2 bundle to control `X-Robots-Tag` HTTP header via annotations.**
 
 [![Total Downloads](https://poser.pugx.org/fourlabs/robots-bundle/downloads)](https://packagist.org/packages/fourlabs/robots-bundle)
 [![License](https://poser.pugx.org/fourlabs/robots-bundle/license)](https://packagist.org/packages/fourlabs/robots-bundle)
@@ -77,7 +77,7 @@ public function showAction()
 
 Set `block_all` to true to always set the `X-Robots-Tag` header to `none`. This will block all indexing and serving. Default: false
 
-This is helpful to set an *environment specific robots header* so as to prevent search engines from indexing dev and test environments. Simple place the following configuration in your config_dev.yml and/or config_test.yml.
+This is helpful to set an **environment specific robots header** so as to prevent search engines from indexing dev and test environments. Simple place the following configuration in your config_dev.yml and/or config_test.yml.
 
 ``` yaml
 four_labs_robots:

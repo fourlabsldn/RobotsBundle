@@ -4,6 +4,7 @@
 
 [![Total Downloads](https://poser.pugx.org/fourlabs/robots-bundle/downloads)](https://packagist.org/packages/fourlabs/robots-bundle)
 [![License](https://poser.pugx.org/fourlabs/robots-bundle/license)](https://packagist.org/packages/fourlabs/robots-bundle)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/25fe368d-13ac-4e1b-8de0-82575b2b7d3a/mini.png)](https://insight.sensiolabs.com/projects/25fe368d-13ac-4e1b-8de0-82575b2b7d3a)
 
 ## Installation
 ### Download the Bundle

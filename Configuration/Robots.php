@@ -3,6 +3,9 @@
 namespace FourLabs\RobotsBundle\Configuration;
 
 use Doctrine\Common\Annotations\Annotation;
+use Doctrine\Common\Annotations\Annotation\Target;
+use Doctrine\Common\Annotations\Annotation\Required;
+use Doctrine\Common\Annotations\Annotation\Enum;
 
 /**
  * @Annotation
